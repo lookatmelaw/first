@@ -1,4 +1,4 @@
-$webhookUrl = 'https://discord.com/api/webhooks/1312716594543329310/AESsDL5qvv4f0SIzKBjnUbZtDC-nyv5k4yuMfZIJsbtOLAJGo08MIV-j_PMD1hhjT5SL'
+$webhookUrl = 'https://discord.com/api/webhooks/1312716612754997278/KqR7pD93OinOKDpA7gIFEXeZLNEZv_3OB-RGhLlyh0eJs3fuuZ30b-jOyVxMr6G5jmGx'
 $payload = @{
     content = 'found'
 } | ConvertTo-Json
